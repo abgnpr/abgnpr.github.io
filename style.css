@@ -4,20 +4,34 @@ html {
   color: #444;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+
+  height: calc(100vh - 80px);
   margin: 40px;
-  max-width: 650px;
-  box-sizing: border-box;
-  padding: 0 10px;
+
   background-color: #eeeeee;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 650px;
+}
+
 .avatar {
-  max-width: 50%;
   display: block;
+  max-width: 50%;
   border-radius: 50%;
 }
 
