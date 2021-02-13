@@ -1,6 +1,3 @@
 {
-    "compile-hero.jade-output-directory": "../",
-    "compile-hero.javascript-output-toggle": false,
-    "compile-hero.pug-output-directory": "../",
-    "compile-hero.sass-output-directory": "../"
-  }
+  "compile-hero.javascript-output-toggle": false,
+}
