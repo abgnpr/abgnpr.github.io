@@ -1,2 +1,4 @@
 import "./style.css";
-import "../images/myavatar.jpg";
+import home from "./home.html";
+
+document.body.innerHTML = home;
