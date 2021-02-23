@@ -2,6 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-/* * {
-  border: 1px solid black;
-} */
+html {
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+* {
+  @apply m-0 p-0 box-border;
+  /* @apply border border-black; */
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  @apply h-full;
+}
+
+a {
+  @apply block place-self-center transform duration-200 active:scale-90;
+}
+
+.btn {
+  @apply py-2 sm:px-2 rounded-sm bg-green-600 text-white font-extrabold select-none w-11/12 text-center text-xs focus:outline-none;
+}
+
+.logo-btn {
+  @apply h-12 w-12 select-none rounded-full focus:outline-none;
+}

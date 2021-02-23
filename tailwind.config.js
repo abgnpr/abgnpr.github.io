@@ -26,19 +26,22 @@ module.exports = {
     extend: {
       boxShadow: ["active"],
       backgroundImage: theme => ({
-        bullseye: "url('../images/bullseye.svg')",
-        palm: "url('../images/palm.jpg')",
+        tree: "url('../images/tree_smaller.jpg')",
       }),
       screens: {
         portrait: { raw: "(orientation: portrait)" },
         landscape: { raw: "(orientation: landscape)" },
         "ratio-3/2": { raw: "(min-aspect-ratio: 3/2)" },
         "ratio-4/3": { raw: "(min-aspect-ratio: 4/3)" },
+        "ratio-max-1/2": { raw: "(max-aspect-ratio: 1/2)" },
+        "ratio-max-5/8": { raw: "(max-aspect-ratio: 5/8)" },
       },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      scale: ["active", "group-hover"],
+    },
   },
   plugins: [require("@tailwindcss/aspect-ratio")],
 };
