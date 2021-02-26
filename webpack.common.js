@@ -4,14 +4,21 @@ const path = require("path");
 
 module.exports = {
   devServer: {
-    host: '0.0.0.0'
+    host: "0.0.0.0",
   },
   entry: {
     index: "./src/index.js",
   },
   plugins: [
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
-    new HtmlWebpackPlugin({ title: "Abhigyan's Page" }),
+    new HtmlWebpackPlugin({
+      template: "./src/home.html",
+      filename: "index.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/about.html",
+      filename: "about.html",
+    }),
   ],
   output: {
     filename: "bundle.js",
