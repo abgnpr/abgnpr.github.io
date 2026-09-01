@@ -160,21 +160,22 @@ The existing Webpack 5/Tailwind 2/Pug setup is obsolete, has current
 Node compatibility failures and has a stale `dist` deployment branch.
 Do not patch around it as the long-term solution.
 
-The recommended replacement is a small Astro + TypeScript static site:
+The agreed replacement is a React-first Vite + TypeScript static site:
 
-- static output with minimal client-side JavaScript;
+- React components for the full presentation layer, with client-side
+  JavaScript kept purposeful;
 - a supported, pinned Node LTS version;
 - content kept in small local data modules/components, derived from the
   approved HQ brief;
+- native CSS and Anime.js for purposeful, reduced-motion-safe motion;
 - responsive image handling and no unnecessary third-party scripts;
 - a reproducible local build and CI build check;
 - GitHub Pages deployment from the default branch through an actions
   workflow, rather than a manually pushed `dist` branch.
 
-Vite with plain HTML/CSS/TypeScript is an acceptable alternative if the
-Astro structure proves unnecessary. The implementation should choose
-one and remove the unused legacy build machinery instead of preserving
-two paths.
+Do not add Tailwind, a UI library, a router or a server runtime to the
+first release. The implementation removes the unused legacy build
+machinery instead of preserving two paths.
 
 #### Content and disclosure brief
 
